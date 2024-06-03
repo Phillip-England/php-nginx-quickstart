@@ -6,17 +6,32 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitef186fa5cbd889833f1723e7b4ec82e1
 {
-    public static $prefixLengthsPsr4 = array (
-        'J' => 
-        array (
-            'Jacex\\Html\\' => 11,
-        ),
+    public static $files = array (
+        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
     );
 
-    public static $prefixDirsPsr4 = array (
-        'Jacex\\Html\\' => 
+    public static $prefixesPsr0 = array (
+        'P' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            'ParsedownExtra' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown-extra',
+            ),
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
+        'H' => 
+        array (
+            'Highlight\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/scrivo/highlight.php',
+            ),
+            'HighlightUtilities\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/scrivo/highlight.php',
+            ),
         ),
     );
 
@@ -27,8 +42,7 @@ class ComposerStaticInitef186fa5cbd889833f1723e7b4ec82e1
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitef186fa5cbd889833f1723e7b4ec82e1::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitef186fa5cbd889833f1723e7b4ec82e1::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitef186fa5cbd889833f1723e7b4ec82e1::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitef186fa5cbd889833f1723e7b4ec82e1::$classMap;
 
         }, null, ClassLoader::class);
