@@ -13,7 +13,7 @@ git clone https://github.com/phillip-england/php-nginx-quickstart
 Install dependencies:
 
 ```bash
-composer install -d config
+composer install
 ```
 
 Serve locally:
@@ -24,12 +24,12 @@ php -S localhost:8080
 
 ## Nginx Config
 
-Your local nginx configuration file is located at `./config/site.conf`
+Your local nginx configuration file is located at `./site.conf`
 
 To copy the local configuration over to your systems default nginx configuration file, from the root of your project run:
 
 ```bash
-./update.sh
+./scripts/conf.sh
 ```
 
 ## Single Entry-Point
@@ -58,7 +58,7 @@ From here you can establish routing using an approach of your choice.
 
 ## Deployment
 
-This project repo can be copied into an nginx server. After updating the nginxconfig on the server and ensuring the proper version of php is installed, you should be solid.
+This project repo can be copied into an nginx server. After updating the nginx config on the server and ensuring the proper version of php is installed, you should be solid.
 
 ### Railway
 
