@@ -1,13 +1,22 @@
 <?php
 
 include 'src/http.php';
+include 'src/components.php';
+include 'src/router.php';
+include 'src/templates.php';
+include 'src/err.php';
+include 'src/middleware.php';
+
 
 $path = Http::getRawPath();
 
-if ($path == "/about") {
-    echo "About";
-} else {
-    echo "Home";
+Router::add('/', function() {
+    Middleware::chain(Templates::base('home'));
+});
+
+$err = Router::handleRequest($path);
+if ($err->isSome()) {
+    Router::notFound();
 }
 
 ?>
