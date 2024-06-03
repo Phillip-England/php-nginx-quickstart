@@ -58,6 +58,8 @@ From here you can establish routing using an approach of your choice.
 
 ## Deployment
 
-This project repo can be copied into an nginx server. After updating the config on the server and ensuring the proper version of php is installed, you should be solid.
+This project repo can be copied into an nginx server. After updating the nginxconfig on the server and ensuring the proper version of php is installed, you should be solid.
 
-The config provided will ensure all files on the server are secure minus `./update.sh` and `./README.md` which can be easily removed.
+### Railway
+
+I've testing this and it deploys to [Railway](https://railway.app) very easily. Simply connect railway to your github repo and it will autoread the Dockerfile and set up your server. Only caveat is you need to set a `PORT=8080` as an env in railway for your application.
