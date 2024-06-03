@@ -1,0 +1,17 @@
+{
+    "name": "jacex/html",
+    "description": "a site",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Jacex\\Html\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Phillip England",
+            "email": "phillip.mark.england@gmail.com"
+        }
+    ],
+    "require": {}
+}
