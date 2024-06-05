@@ -4,13 +4,13 @@ class Router {
 
     public static $routes = array();
 
-    public static function add(string $route, callable $callback) {
+    public static function add(string $route, $callback) {
         self::$routes[$route] = $callback;
     }
 
     public static function handleRequest(string $path): Option {
         if (array_key_exists($path, self::$routes)) {
-            self::$routes[$path]();
+            self::$routes[$path];
             return Option::none();
         } else {
             return Option::some("404 not found");

@@ -1,8 +1,8 @@
 <?php
 
-class Templates {
+class Template {
 
-    public static function base(string $title) {
+    public static function base(string $title, callable $content) {
         ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -12,7 +12,9 @@ class Templates {
                 <title><?= $title ?></title>
             </head>
             <body>
-                <h1>hello world</h1>
+                <div>
+                    <?= $content() ?>
+                </div>
             </body>
             </html>
         <?php

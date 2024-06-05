@@ -2,7 +2,7 @@
 
 class Middleware {
 
-    public static function chain(null $handler, callable ...$middleware) {
+    public static function chain($handler, callable ...$middleware) {
         foreach ($middleware as $m) {
             $m();
         }
